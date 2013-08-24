@@ -1,0 +1,7 @@
+<h1>New Palindrome</h1>
+
+<%= form_for @palindrome do |f| %>
+	<%= f.label :word, "Enter a word:" %>
+	<%= f.text_field :word %>
+	<%= f.submit "Submit" %>
+<% end %>
