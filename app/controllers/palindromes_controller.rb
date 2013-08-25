@@ -8,12 +8,20 @@ class PalindromesController < ApplicationController
 	end
 
 	def create
-		Palindrome.create(palindromes_params)
-		redirect_to palindromes_path
+		palindrome = Palindrome.new(palindromes_params)
+
+		
+		if palindrome.save
+			redirect_to palindromes_path
+		else
+			redirect_to new_palindrome_path
+		end
+
 	end
 
 	def palindromes_params
 		params.require(:palindrome).permit(:word)
 	end
+
 
 end
