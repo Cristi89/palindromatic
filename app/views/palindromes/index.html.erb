@@ -1,8 +1,14 @@
-<h1>Palindromes!</h1>
+<div id="title">
+	<h1>Palindromes!</h1>
+</div>
 
-<% @palindromes.each do |p| %>
-	<%= p.word %>
-	</br>	
-<% end %>
+<div id="section">
 
-<%= link_to 'New', new_palindrome_path %>
+<ul>
+	<% @palindromes.each do |p| %>
+		<li><%= p.word %></li>
+	<% end %>
+
+	<%= link_to 'New', new_palindrome_path %>
+
+</div>
