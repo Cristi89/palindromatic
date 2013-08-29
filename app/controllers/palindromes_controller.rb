@@ -8,9 +8,9 @@ class PalindromesController < ApplicationController
 	end
 
 	def create
+
 		palindrome = Palindrome.new(palindromes_params)
 
-		
 		if palindrome.save
 			redirect_to palindromes_path
 		else
