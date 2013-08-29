@@ -11,4 +11,9 @@
 	<% end %>
 
 	<%= link_to 'Back to List', palindromes_path %>
+
+</br>
+	<% flash.each do |type, message| %>
+		<%= message %>
+	<% end %> 
 </div>

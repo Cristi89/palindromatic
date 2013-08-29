@@ -14,6 +14,7 @@ class PalindromesController < ApplicationController
 		if palindrome.save
 			redirect_to palindromes_path
 		else
+			flash[:error] = "Error. That's not a palindrome. Try again."
 			redirect_to new_palindrome_path
 		end
 
